@@ -30,4 +30,7 @@ chmod +x installRedisAlone
 }
 ```
 
-
+- 通过app停止脚本生成ansible使用的停止脚本
+```
+curl -o auto_transSH_strip  -sL https://github.com/jingslunt/services/releases/download/1.0/auto_transSH_strip
+```

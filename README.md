@@ -35,12 +35,13 @@ chmod +x installRedisAlone
 curl -o auto_transSH_strip  -sL https://github.com/jingslunt/services/releases/download/1.0/auto_transSH_strip
 ```
 - java后端服务批量关闭，启动，重启脚本
+
 > ############################################ 
-> ##java后端服务批量关闭，启动，重启脚本 
-> ##需要调用message，port两个文件，文件不存在不执行 
-> ##重启关闭调用开发放置的/opt/start/关闭启动脚本 
-> ##需保证运维服务器可以免密管理java后端服务器 
-> ##问题联系：OC Jngs  2021-07-07 
+> java后端服务批量关闭，启动，重启脚本 
+> 需要调用message，port两个文件，文件不存在不执行 
+> 重启关闭调用开发放置的/opt/start/关闭启动脚本 
+> 需保证运维服务器可以免密管理java后端服务器 
+> 问题联系：OC Jngs  2021-07-07 
 > ########################################### 
 ```
 curl -o webServiceRestart_strip  -sL https://github.com/jingslunt/services/releases/download/1.0/webServiceRestart_strip

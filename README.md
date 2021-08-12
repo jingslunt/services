@@ -36,7 +36,7 @@ curl -o auto_transSH_strip  -sL https://github.com/jingslunt/services/releases/d
 ```
 - java后端服务批量关闭，启动，重启脚本
 
-> ############################################ 
+############################################ 
 java后端服务批量关闭，启动，重启脚本 
 需要调用message，port两个文件，文件不存在不执行 
 重启关闭调用开发放置的/opt/start/关闭启动脚本 

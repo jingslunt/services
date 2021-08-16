@@ -54,3 +54,27 @@ curl -o auto_transSH_strip  -sL https://github.com/jingslunt/services/releases/d
 ```
 curl -o webServiceRestart_strip  -sL https://github.com/jingslunt/services/releases/download/1.0/webServiceRestart_strip
 ```
+
+- 生成zabbix的web模板
+下载
+```shell
+{
+curl -o createTemplateScript -sL https://github.com/jingslunt/services/releases/download/1.0/createTemplateScript
+chmod +x createTemplateScript
+./createTemplateScript
+}
+```
+使用
+
+```
+[root@k8s-master-node1 zabbix]# ./createTemplateScript 
+格式:./createTemplateScript [可选参数]
+
+	可选参数为:
+            -f             调用的服务配置
+            -o             生成的xml文件
+            -a             产品地区，比如mc-cn
+            -h             使用帮助
+ 例如: ./createTemplateScript -a mc-cn -f port -o mc-cn-web-template.xml
+
+```

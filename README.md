@@ -34,7 +34,7 @@ chmod +x installRedisAlone
 ```
 curl -o auto_transSH_strip  -sL https://github.com/jingslunt/services/releases/download/1.0/auto_transSH_strip
 ```
-- java后端服务批量关闭，启动，重启脚本
+- java后端服务批量生成关闭，启动，重启脚本
 
 > ############################################ 
 >

@@ -78,3 +78,39 @@ chmod +x createTemplateScript
  例如: ./createTemplateScript -a mc-cn -f port -o mc-cn-web-template.xml
 
 ```
+
+- 生成zabbix的hosts xml导入脚本
+下载
+```shell
+{
+curl -o zbxCreateHosts -sL https://github.com/jingslunt/services/releases/download/1.0/zbxCreateHosts
+chmod +x zbxCreateHosts
+./zbxCreateHosts
+}
+```
+使用
+
+```
+[root@k8s-master-node1 zabbix]# ./zbxCreateHosts
+说明：
+############################################
+## zabbix生成主机脚本
+## 需要调用多配置文件，文件不存在不执行
+## 需优先在zabbix服务端配置好指定agent代理程序
+## 问题联系：OC林锦华  2021-08-27
+###########################################     
+
+格式:./zbxCreateHosts [可选参数]
+
+	可选参数为:
+            -f             调用的服务配置，比如mysql=1.2.1.1 1.2.1.2
+            -s             调用的IP主机名，比如1.2.1.1  test-tw-db-01-01
+            -o             生成的xml文件名
+            -a             产品地区，比如test-tw
+            -p             指定zabbix proxy服务端名
+            -h             使用帮助
+        例如: ./zbxCreateHosts -a test-tw -p test-tw-proxy -s hostname -f services.conf -o test-tw-hosts.xml
+
+
+```
+

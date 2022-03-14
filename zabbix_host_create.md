@@ -160,24 +160,28 @@ main "$@"
 
 
 
-例子
+#### 例子
+- hostname
 ```
-hostname
 10.75.12.10 cdc-de-k8s-bas-01-01
 10.75.12.11 cdc-de-k8s-bas-01-02
 10.75.12.12 cdc-de-k8s-bas-01-03
 10.75.12.20 cdc-de-k8s-db-01-01
 10.75.12.21 cdc-de-k8s-db-01-02
-services.conf
+```
+- services.conf
+```
 mysql=10.75.12.20 10.75.12.21
 redis=10.75.12.10 10.75.12.11 10.75.12.12
 rabbitmq=10.75.12.10 10.75.12.11 10.75.12.12
-servicestpl.conf
+```
+- servicestpl.conf
+```
 redistpl:redis-port
 rabbitmqtpl:rabbitmq-port,rabbitmq-Template
 mysqltpl:mysql_slave_status,Template App MySQL
 ```
-运行
+#### 运行
 ```
 run.sh
 bash zbxgen.sh -a cdc-de-k8s -p cdc-de-k8s-proxy -s hostname -f services.conf -r servicestpl.conf -o cdc-de-k8s-hosts.xml
